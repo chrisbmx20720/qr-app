@@ -5,16 +5,16 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "echo 'No build step required'",
+    "build": "netlify deploy --prod",
     "deploy": "netlify deploy --prod"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "netlify-cli": "^17.34.1",
     "qrcode": "^1.5.0",
-    "serverless-http": "^2.8.0"
+    "serverless-http": "^2.7.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=14.x"
   },
