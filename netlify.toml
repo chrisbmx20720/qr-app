@@ -1,0 +1,9 @@
+[build]
+publish = "public"
+functions = "functions"
+
+[dev]
+framework = "#custom"
+command = "node src/index.js"
+targetPort = 3000
+port = 8888
