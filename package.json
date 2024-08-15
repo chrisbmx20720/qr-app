@@ -1,17 +1,23 @@
 {
-  "name": "qr-app",
+  "name": "qr-generator-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A QR code generator app using Node.js, Express, EJS, and Netlify functions.",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.19.2",
-    "qrcode": "^1.5.4"
-  }
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "qrcode": "^1.5.0",
+    "serverless-http": "^2.8.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.x"
+  },
+  "author": "",
+  "license": "ISC"
 }
