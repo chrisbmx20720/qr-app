@@ -4,7 +4,7 @@
   "description": "A QR code generator app using Node.js, Express, EJS, and Netlify functions.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node .functions/express-server.js",
     "build": "netlify deploy --prod",
     "deploy": "netlify deploy --prod"
   },
