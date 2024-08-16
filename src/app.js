@@ -1,36 +1,27 @@
 const express = require('express');
 const serverless = require('serverless-http');
 const path = require('path');
-const qr = require('qrcode');
+const bodyParser = require('express').urlencoded({ extended: false });
+const indexRouter = require('../routes/index');
 
 const app = express();
 
-// Configurar EJS como el motor de plantillas
-app.set('view engine', 'ejs');
+// Configuración para servir vistas directamente desde la carpeta views
 app.set('views', path.join(__dirname, '../views'));
+app.set('view engine', 'ejs');
 
-// Middleware para manejar datos del formulario
-app.use(express.urlencoded({ extended: false }));
+// Middleware para servir archivos estáticos
+app.use(express.static(path.join(__dirname, '../public')));
 
-// Ruta principal
-app.get('/', (req, res) => {
-  res.render('index', { qrCodeImage: null });
-});
+// Middleware para manejar formularios
+app.use(bodyParser);
 
-// Ruta para generar el código QR
-app.post('/', async (req, res) => {
-  const url = req.body.url;
-  if (!url) {
-    return res.render('index', { qrCodeImage: null });
-  }
+// Middleware para manejar las rutas
+app.use('/', indexRouter);
 
-  try {
-    const qrCodeImage = await qr.toDataURL(url);
-    res.render('index', { qrCodeImage });
-  } catch (err) {
-    console.error(err);
-    res.send('Error occurred');
-  }
+// Manejo de errores
+app.use((req, res) => {
+  res.status(404).send('Página no encontrada');
 });
 
 // Exportar como función serverless
