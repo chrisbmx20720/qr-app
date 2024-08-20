@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/out-tsc",
+      "module": "commonjs",
+      "target": "es2015",
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "declaration": false,
+      "importHelpers": true,
+      "downlevelIteration": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true
+    },
+    "exclude": [
+      "node_modules",
+      "src/test.ts",
+      "**/*.spec.ts"
+    ]
+  }
+  

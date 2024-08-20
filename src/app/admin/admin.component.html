@@ -1,0 +1,28 @@
+<!-- Main Content for Clients -->
+<div *ngIf="currentView === 'clients'">
+  <h2>Clients</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Profit</th>
+        <th>Comments</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.id }}</td>
+        <td>{{ client.name }}</td>
+        <td>{{ client.email }}</td>
+        <td><input [(ngModel)]="client.profit" class="form-control" /></td>
+        <td><input [(ngModel)]="client.comments" class="form-control" /></td>
+        <td>
+          <button (click)="save(client)" class="btn btn-primary">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

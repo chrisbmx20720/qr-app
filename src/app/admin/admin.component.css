@@ -1,0 +1,25 @@
+.container-fluid {
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .nav-link {
+    cursor: pointer;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  input {
+    width: 100%;
+  }
+  

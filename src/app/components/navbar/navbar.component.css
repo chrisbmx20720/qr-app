@@ -1,0 +1,22 @@
+.navbar {
+    margin-bottom: 20px;
+    padding:10px 20px;
+}
+
+.navegador-menu{
+    width:200px;
+}
+
+.contenedor{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+.navbar-nav a.nav-link:hover,
+.navbar-nav a.nav-link:active{
+    color:blueviolet;
+    font-weight: 500;
+}
+

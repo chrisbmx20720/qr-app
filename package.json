@@ -1,24 +1,41 @@
 {
-  "name": "qr-generator-app",
-  "version": "1.0.0",
-  "description": "A QR code generator app using Node.js, Express, EJS, and Netlify functions.",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "npx netlify-lambda serve src",
-    "build": "npx netlify-lambda build src"
-
-  },
-  "dependencies": {
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "netlify-cli": "^17.34.1",
-    "netlify-lambda": "^2.0.16",
-    "qrcode": "^1.5.0",
-    "serverless-http": "^2.7.0"
-  },
-  "engines": {
-    "node": ">=14.x"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "trading-app",
+    "version": "0.0.1",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "api": "node backend/server.js"
+    },
+    "dependencies": {
+        "@angular/animations": "~15.2.4",
+        "@angular/common": "~15.2.4",
+        "@angular/compiler": "~15.2.4",
+        "@angular/core": "~15.2.4",
+        "@angular/forms": "~15.2.4",
+        "@angular/platform-browser": "~15.2.4",
+        "@angular/platform-browser-dynamic": "~15.2.4",
+        "@angular/router": "~15.2.4",
+        "@fortawesome/fontawesome-free": "^6.6.0",
+        "bcryptjs": "^2.4.3",
+        "bootstrap": "^5.3.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "mongodb": "^6.8.0",
+        "mongoose": "^8.5.3",
+        "rxjs": "~7.8.0",
+        "zone.js": "~0.13.0"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~15.2.4",
+        "@angular/cli": "~15.2.4",
+        "@angular/compiler-cli": "~15.2.4",
+        "@types/jasmine": "~4.3.0",
+        "@types/node": "^20.2.5",
+        "typescript": "~4.9.5"
+    }
 }

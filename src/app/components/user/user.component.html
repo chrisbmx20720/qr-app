@@ -1,0 +1,31 @@
+<div class="user-dashboard">
+  <!-- Columna Izquierda: Menú de Navegación -->
+  <div class="sidebar">
+    <div class="wallet-info">
+      <i class="fas fa-wallet"></i>
+      <span class="wallet-amount">{{ walletAmount | currency }}</span>
+    </div>
+    <ul class="menu">
+      <li routerLink="/user/inicio" routerLinkActive="active">
+        <i class="fas fa-home"></i> Inicio
+      </li>
+      <li routerLink="/user/messages" routerLinkActive="active">
+        <i class="fas fa-envelope"></i> Mensajes
+      </li>
+    </ul>
+  </div>
+
+  <!-- Columna Derecha: Contenido Principal -->
+  <div class="main-content">
+    <!-- Fila: Notificaciones -->
+    <div class="notification-bar" (click)="showMessages(); clearNotifications()">
+      <i class="fas fa-bell"></i> 
+      <span class="badge" *ngIf="notifications > 0">{{ notifications }}</span>
+    </div>
+
+    <!-- Contenido Dinámico -->
+    <div class="content">
+      <router-outlet></router-outlet> <!-- Aquí se mostrará el contenido basado en la ruta -->
+    </div>
+  </div>
+</div>
